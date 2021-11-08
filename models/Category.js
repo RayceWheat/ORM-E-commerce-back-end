@@ -8,8 +8,8 @@ Category.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: false,
-      primarykey: true,
       autoIncrement: true
     },
     category_name: {
@@ -25,5 +25,6 @@ Category.init(
     modelName: 'category',
   }
 );
+
 
 module.exports = Category;
