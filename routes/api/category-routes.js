@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { sequelize } = require('../../../just-tech-news/models/Post');
 const { Category, Product, ProductTag } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -41,6 +40,7 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No category found with this idea '});
         return;
       }
+      res.json(dbCategoryData);
     })
     .catch(err => {
       console.log(err);

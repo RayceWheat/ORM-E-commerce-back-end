@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   // find a single tag by its `id`
   // be sure to include its associated Product data
-  Tag.findAll({
+  Tag.findOne({
     where: {
       id: req.params.id
     },
@@ -40,13 +40,14 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No tag found with this id'});
         return;
       }
-      res.json(dbTagData)
+      res.json(dbTagData);
+    })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
-      });
     });
 });
+
 
 router.post('/', (req, res) => {
   // create a new tag
@@ -63,7 +64,7 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
   Tag.update({
-    tag_name: req.body.title
+    tag_name: req.body.tag_name
   },
   {
     where: {
