@@ -9,5 +9,8 @@ This application requires dotenv to store sensative information, mysql2, and seq
 ## Usage 
 To use this app you will need to first create the database in the Mysql shell, then seed it using npm run seed, and then once the server is running you can check using your browser or insomnia to check the variours routes 
 
+## Videolink
+![Video](https://github.com/RayceWheat/ORM-E-commerce-back-end/blob/develop/public/assests/Demonstration%20video.mkv)
+
 ## Credits 
 Intial code Xandromus and Dependabaot and the rest by Rayce Wheat
